@@ -34,8 +34,8 @@ int main() {
 				      if(myVec[sum[i]]==-1)
 					        myVec[sum[i]]=i;
 				      else{
-					        cout<<i-myVec[sum[i]]-1<<endl;
-					        cout<<myVec[sum[i]]+1<<"\t"<<i<<endl;
+					        cout<<i-myVec[sum[i]]-1<<"\n";
+					        cout<<myVec[sum[i]]+1<<"\t"<<i<<"\n";
 			        }
 			    }
 		    }
