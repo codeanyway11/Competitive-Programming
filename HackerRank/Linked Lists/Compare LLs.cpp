@@ -10,24 +10,15 @@
      struct Node *next;
   }
 */
-int CompareLists(Node *headA, Node* headB)
-{
-  if(!headA && !headB){
-      return true;
-  }
-  if((headA && !headB) || (!headA && headB)){
-      return false;
-  }
-  while(headA && headB){
-      if(headA->data != headB->data){
-          return false;
-      }
-      headA= headA->next;
-      headB= headB->next;
-  }
-    if(!headA && !headB){
-      return true;
-  }
-    return false;
 
+bool CompareLists(Node* a, Node* b)
+{
+    while(a && b){
+        if(a->data != b->data){
+            return false;
+        }
+        a = a->next;
+        b = b->next;
+    }
+    return (a == NULL && b == NULL);
 }
