@@ -23,14 +23,14 @@ struct MinHeapNode* newNode(char data, unsigned freq)
     return temp;
 }
 
-struct MinHeap* createMinHeap(unsigned capacity)
+struct MinHeap* createMinHeap(int capacity)
 {
     struct MinHeap* minHeap = new MinHeap();
     minHeap->size = 0;
     minHeap->capacity = capacity;
-    minHeap->array = new struct MinHeapNode*[minHeap->capacity];
+    minHeap->array = new struct MinHeapNode* [minHeap->capacity];
     for(int i=0; i<minHeap->capacity; i++){
-        minHeap->array[i] = new struct MinHeapNode*[minHeap->capacity];
+        minHeap->array[i] = new struct MinHeapNode [minHeap->capacity];
     }
     return minHeap;
 }
