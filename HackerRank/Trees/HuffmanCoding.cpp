@@ -29,9 +29,9 @@ struct MinHeap* createMinHeap(int capacity)
     minHeap->size = 0;
     minHeap->capacity = capacity;
     minHeap->array = new struct MinHeapNode* [minHeap->capacity];
-    for(int i=0; i<minHeap->capacity; i++){
-        minHeap->array[i] = new struct MinHeapNode;
-    }
+    //for(int i=0; i<minHeap->capacity; i++){
+    //    minHeap->array[i] = new struct MinHeapNode;
+    //}
     return minHeap;
 }
 
