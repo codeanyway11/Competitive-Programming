@@ -10,7 +10,7 @@ struct MinHeapNode{
 
 struct MinHeap{
     unsigned size;
-    unsigned capacity;
+    int capacity;
     struct MinHeapNode** array;
 };
 
@@ -30,7 +30,7 @@ struct MinHeap* createMinHeap(int capacity)
     minHeap->capacity = capacity;
     minHeap->array = new struct MinHeapNode* [minHeap->capacity];
     for(int i=0; i<minHeap->capacity; i++){
-        minHeap->array[i] = new struct MinHeapNode [minHeap->capacity];
+        minHeap->array[i] = new struct MinHeapNode;
     }
     return minHeap;
 }
