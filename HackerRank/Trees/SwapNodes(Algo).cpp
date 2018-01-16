@@ -38,8 +38,8 @@ void swap(int k,struct node* root,int level)
             t0 = NULL;
         }
         swap(k,root->left,level+1);
-        cout<<root->data<<" ";
         swap(k,root->right,level+1);
+
     }
 }
 
@@ -64,12 +64,15 @@ int main() {
             q.push(temp->right);
         }
     }
-    // printInOrder(root);
+    printInOrder(root);
+    cout<<endl;
 
     int t; cin>>t;
     while(t--){
         int n; cin>>n;
-        swap(n, root, 0);
+        swap(n, root, 1);
+        printInOrder(root);
+
         cout<<endl;
     }
 
